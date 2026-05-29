@@ -1,0 +1,56 @@
+export type UpdateCategory = "PROJECTS" | "TRAINING";
+
+export const UPDATES_SECTION = {
+  eyebrow: "Updates",
+  heading: "Our Trainings and Projects",
+  moreUpdates: { label: "MORE UPDATES", href: "/updates" },
+} as const;
+
+export type FeaturedUpdate = {
+  category: UpdateCategory;
+  title: string;
+  location: string;
+  date: string;
+  image: string;
+  href: string;
+};
+
+export type StandardUpdate = {
+  id: string;
+  category: UpdateCategory;
+  title: string;
+  date: string;
+  meta: string;
+  image: string;
+  href: string;
+};
+
+export const FEATURED_UPDATE: FeaturedUpdate = {
+  category: "PROJECTS",
+  title: "Folifod inspects Storage Tank at Ughelli, Delta State",
+  location: "Heritage Tank Farm Site",
+  date: "February 2024",
+  image: "/Service Image 3.png",
+  href: "/updates/storage-tank-ughelli",
+};
+
+export const STANDARD_UPDATES: StandardUpdate[] = [
+  {
+    id: "qa-training",
+    category: "TRAINING",
+    title: "Quality Assurance & Control Fundamentals",
+    date: "November 2025",
+    meta: "3-Day Workshop",
+    image: "/hero-bg-right.jpg",
+    href: "/updates/quality-assurance-training",
+  },
+  {
+    id: "pipeline-project",
+    category: "PROJECTS",
+    title: "Pipeline Fabrication & Installation – Niger Delta Region",
+    date: "July 2024",
+    meta: "Fabrication and installation",
+    image: "/Service Image 1.png",
+    href: "/updates/pipeline-fabrication",
+  },
+];
