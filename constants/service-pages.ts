@@ -73,7 +73,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
     slug: "epc",
     heroTitle: "FOLIFOD EPC",
     breadcrumbLabel: "Our Services",
-    heroImage: "/epc-service.png",
+    heroImage: "/epc-hero.jpg",
     intro: {
       eyebrow: "Our Services",
       heading: "FOLIFOD EPC",
@@ -109,7 +109,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
     slug: "maintenance",
     heroTitle: "FOLIFOD MAINTENANCE",
     breadcrumbLabel: "Our Services",
-    heroImage: "/Service Image 2.png",
+    heroImage: "/project-details-hero.jpg",
     intro: {
       eyebrow: "Our Services",
       heading: "Precision. Reliability. Performance.",
@@ -139,7 +139,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
     slug: "inspection",
     heroTitle: "FOLIFOD INSPECTION",
     breadcrumbLabel: "Our Services",
-    heroImage: "/Service Image 3.png",
+    heroImage: "/project-details-hero.jpg",
     intro: {
       eyebrow: "Our Services",
       heading: "Integrity. Compliance. Confidence.",
@@ -184,7 +184,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
     slug: "training",
     heroTitle: "FOLIFOD TRAINING",
     breadcrumbLabel: "Our Services",
-    heroImage: "/Service Image 4.png",
+    heroImage: "/training-bg-img.jpg",
     intro: {
       eyebrow: "Our Services",
       heading: "Building Competence. Elevating Standards. Sustaining Excellence.",

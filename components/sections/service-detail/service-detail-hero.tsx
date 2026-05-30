@@ -22,7 +22,7 @@ export function ServiceDetailHero({
           fill
           priority
           aria-hidden
-          className="object-cover object-center"
+          className="object-cover object-[center_35%] -scale-x-100"
           sizes="100vw"
         />
         <div

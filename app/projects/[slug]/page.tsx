@@ -49,8 +49,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         title={project.title}
         client={project.client}
         location={project.location}
-        projectRef={project.projectRef}
-        service={project.service}
+        sections={project.sections}
         introImage={project.introImage}
       />
       <ProjectDetailGallerySection title={project.title} images={project.galleryImages} />
