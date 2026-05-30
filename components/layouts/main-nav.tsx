@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { NAV_LINKS, SERVICES_DROPDOWN_ITEMS } from "@/constants/site";
 import { ChevronDownIcon } from "@/components/shared/icons";
 import { cn } from "@/lib/utils";
@@ -9,25 +12,48 @@ type MainNavProps = {
 };
 
 export function MainNav({ className, onLinkClick }: MainNavProps) {
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
   return (
     <nav className={cn(className)} aria-label="Main navigation">
       <ul className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-8">
-        {NAV_LINKS.map((link) => (
-          <li key={link.label} className="group relative">
-            <Link
-              href={link.href}
-              onClick={onLinkClick}
-              className="inline-flex items-center gap-1 py-2 text-[15px] font-medium text-[#2d2d2d] transition-colors hover:text-[#00aeef] lg:py-0"
-            >
-              {link.label}
-              {"hasDropdown" in link && link.hasDropdown ? (
-                <ChevronDownIcon className="h-4 w-4 text-[#6b6b6b]" />
-              ) : null}
-            </Link>
+        {NAV_LINKS.map((link) => {
+          const hasDropdown = "hasDropdown" in link && link.hasDropdown;
 
-            {"hasDropdown" in link && link.hasDropdown ? (
-              <>
-                <ul className="mt-1 space-y-1 border-l border-[#e8edf3] pl-4 lg:hidden">
+          if (hasDropdown) {
+            return (
+              <li key={link.label} className="group relative">
+                <button
+                  type="button"
+                  className="inline-flex w-full items-center justify-between gap-1 py-2 text-left text-[15px] font-medium text-[#2d2d2d] transition-colors hover:text-[#00aeef] lg:hidden"
+                  aria-expanded={mobileServicesOpen}
+                  aria-controls="mobile-services-menu"
+                  onClick={() => setMobileServicesOpen((open) => !open)}
+                >
+                  {link.label}
+                  <ChevronDownIcon
+                    className={cn(
+                      "h-4 w-4 shrink-0 text-[#6b6b6b] transition-transform",
+                      mobileServicesOpen && "rotate-180",
+                    )}
+                  />
+                </button>
+
+                <Link
+                  href={link.href}
+                  className="hidden items-center gap-1 py-2 text-[15px] font-medium text-[#2d2d2d] transition-colors hover:text-[#00aeef] lg:inline-flex lg:py-0"
+                >
+                  {link.label}
+                  <ChevronDownIcon className="h-4 w-4 text-[#6b6b6b]" />
+                </Link>
+
+                <ul
+                  id="mobile-services-menu"
+                  className={cn(
+                    "mt-1 space-y-1 border-l border-[#e8edf3] pl-4 lg:hidden",
+                    !mobileServicesOpen && "hidden",
+                  )}
+                >
                   {SERVICES_DROPDOWN_ITEMS.map((item) => (
                     <li key={item.label}>
                       <Link
@@ -46,7 +72,6 @@ export function MainNav({ className, onLinkClick }: MainNavProps) {
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        onClick={onLinkClick}
                         className="block px-4 py-2 text-[14px] font-medium text-[#2d2d2d] transition-colors hover:bg-[#f7fbff] hover:text-[#00aeef]"
                       >
                         {item.label}
@@ -54,10 +79,22 @@ export function MainNav({ className, onLinkClick }: MainNavProps) {
                     </li>
                   ))}
                 </ul>
-              </>
-            ) : null}
-          </li>
-        ))}
+              </li>
+            );
+          }
+
+          return (
+            <li key={link.label} className="relative">
+              <Link
+                href={link.href}
+                onClick={onLinkClick}
+                className="inline-flex items-center gap-1 py-2 text-[15px] font-medium text-[#2d2d2d] transition-colors hover:text-[#00aeef] lg:py-0"
+              >
+                {link.label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

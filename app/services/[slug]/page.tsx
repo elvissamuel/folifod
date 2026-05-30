@@ -11,6 +11,7 @@ import { ServiceDetailIntroSection } from "@/components/sections/service-detail/
 import { ServiceDetailFocusSection } from "@/components/sections/service-detail/service-detail-focus-section";
 import { ServiceDetailInspectionSection } from "@/components/sections/service-detail/service-detail-inspection-section";
 import { ServiceDetailTrainingSection } from "@/components/sections/service-detail/service-detail-training-section";
+import { BuildCtaSection } from "@/components/sections/build-cta/build-cta-section";
 
 type ServiceDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -78,6 +79,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
       )}
       <ServicesSection />
       <ProjectsPageCallbackMapSection />
+      <BuildCtaSection />
     </SiteShell>
   );
 }

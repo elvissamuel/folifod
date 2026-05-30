@@ -9,7 +9,7 @@ export function ProjectsSectionHeader() {
       <p className="text-sm font-semibold text-[#1a4a7a]">{eyebrow}</p>
       <h2
         id="projects-heading"
-        className="mt-2 text-2xl font-bold leading-tight text-[#1a1a1a] sm:text-3xl lg:text-4xl"
+        className="mt-2 text-2xl font-bold w-[500px] mx-auto leading-tight text-[#1a1a1a] sm:text-3xl lg:text-4xl"
       >
         {heading}
       </h2>

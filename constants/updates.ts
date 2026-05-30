@@ -41,7 +41,7 @@ export const STANDARD_UPDATES: StandardUpdate[] = [
     title: "Quality Assurance & Control Fundamentals",
     date: "November 2025",
     meta: "3-Day Workshop",
-    image: "/hero-bg-right.jpg",
+    image: "/training-1.png",
     href: "/updates/quality-assurance-training",
   },
   {
@@ -50,7 +50,7 @@ export const STANDARD_UPDATES: StandardUpdate[] = [
     title: "Pipeline Fabrication & Installation – Niger Delta Region",
     date: "July 2024",
     meta: "Fabrication and installation",
-    image: "/Service Image 1.png",
+    image: "/training-2.jpg",
     href: "/updates/pipeline-fabrication",
   },
 ];

@@ -9,10 +9,10 @@ export function WhyChooseUsImage() {
       <Image
         src={src}
         alt={alt}
-        width={440}
-        height={480}
-        className="h-auto w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[360px]"
-        sizes="(max-width: 1024px) 70vw, 360px"
+        width={560}
+        height={620}
+        className="h-auto w-full max-w-[320px] sm:max-w-md lg:max-w-lg"
+        sizes="(max-width: 1024px) 90vw, 560px"
       />
     </div>
   );

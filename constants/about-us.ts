@@ -15,7 +15,7 @@ export const ABOUT_US_INTRO = {
     "We are your first line of defense in equipment integrity inspections. Our Asset Integrity program provides quality assurance efficiency in design, construction, installation, maintenance, and in-service operational competence. Our range of services include Static Equipment Integrity, Quality Management, and Inspection Services.",
   ],
   image: {
-    src: "/choose-us-img.png",
+    src: "/about-image-1.png",
     alt: "Folifod engineers performing equipment inspection",
   },
 } as const;
@@ -65,7 +65,7 @@ export const ABOUT_US_VALUES = {
     },
   ],
   image: {
-    src: "/vision-img.png",
+    src: "/about-image-2.png",
     alt: "Folifod team in a technical training room",
   },
 } as const;

@@ -26,7 +26,7 @@ export function AboutUsValuesSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#1a4a7a]">
               {ABOUT_US_VALUES.eyebrow}
             </p>
-            <h2 id="about-values-heading" className="mt-2 text-4xl font-bold leading-tight text-[#00aeef]">
+            <h2 id="about-values-heading" className="mt-2 text-3xl w-[400px] font-bold leading-tight text-[#00B5F9]">
               {ABOUT_US_VALUES.heading}
             </h2>
             <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[#505050]">
@@ -36,7 +36,7 @@ export function AboutUsValuesSection() {
             <div className="mt-7 grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
               {ABOUT_US_VALUES.items.map((value) => (
                 <article key={value.title}>
-                  <h3 className="text-3xl font-bold leading-tight text-[#1a1a1a]">{value.title}</h3>
+                  <h3 className="text-xl font-bold leading-tight text-[#1a1a1a]">{value.title}</h3>
                   <p className="mt-1 text-[15px] leading-7 text-[#4f4f4f]">{value.text}</p>
                 </article>
               ))}

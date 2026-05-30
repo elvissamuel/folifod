@@ -56,12 +56,29 @@ export function ServiceDetailTrainingSection({
             <p className="mt-4 text-[14px] leading-7 text-[#4f4f4f]">{philosophy.description}</p>
           </header>
 
-          <ul className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
-            {philosophy.cards.map((card) => (
-              <li key={card.title} className={`rounded-md px-6 py-7 text-center text-white ${card.className}`}>
-                <h3 className="text-[2rem] font-bold leading-tight">{card.title}</h3>
-              </li>
-            ))}
+          <ul className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch">
+            {philosophy.cards.map((card) => {
+              const isLongCopy = card.title.length > 45;
+
+              return (
+                <li
+                  key={card.title}
+                  className={`relative flex h-[220px] flex-col overflow-hidden rounded-md px-6 py-7 text-center text-white sm:h-[220px] ${card.className}`}
+                >
+                  <div className="relative z-10 flex flex-1 items-center justify-center overflow-y-auto">
+                    <h3
+                      className={
+                        isLongCopy
+                          ? "text-lg font-bold leading-snug sm:text-xl"
+                          : "text-[1.4rem] font-bold leading-tight"
+                      }
+                    >
+                      {card.title}
+                    </h3>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </Container>
       </section>

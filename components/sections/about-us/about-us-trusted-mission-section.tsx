@@ -2,34 +2,61 @@ import Image from "next/image";
 import { Container } from "@/components/shared/container";
 import { ABOUT_US_MISSION_VISION } from "@/constants/about-us";
 import { PARTNER_LOGOS_ROW_ONE, PARTNER_LOGOS_ROW_TWO } from "@/constants/trusted-partners";
+import { cn } from "@/lib/utils";
 
 const logoRows = [PARTNER_LOGOS_ROW_ONE, PARTNER_LOGOS_ROW_TWO] as const;
 
 export function AboutUsTrustedMissionSection() {
   return (
-    <section className="relative bg-[#f3f3f3] pt-12 sm:pt-14" aria-labelledby="about-trusted-heading">
+    <section className="relative pt-12 sm:pt-14" aria-labelledby="about-trusted-heading">
       <Container>
-        <h2 id="about-trusted-heading" className="text-center text-4xl font-bold leading-tight text-[#b8b8b8]">
+        <h2
+          id="about-trusted-heading"
+          className="text-center text-3xl font-bold leading-tight text-[#C2C2C2] sm:text-4xl"
+        >
           Trusted by
           <br />
           Industry Leaders
         </h2>
 
-        <div className="mx-auto mt-8 max-w-5xl space-y-6">
+        <div className="mx-auto mt-6 max-w-5xl space-y-8 sm:mt-8 sm:space-y-6">
           {logoRows.map((row, rowIndex) => (
-            <ul key={rowIndex} className="flex flex-wrap items-center justify-center">
+            <ul
+              key={rowIndex}
+              className={cn(
+                "grid grid-cols-2 justify-items-center gap-x-4 gap-y-7 px-1",
+                "sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-y-0 sm:px-0",
+                rowIndex === 1 && "sm:mx-auto sm:max-w-3xl",
+              )}
+            >
               {row.map((logo, index) => (
-                <li key={logo.id} className="flex items-center">
+                <li
+                  key={logo.id}
+                  className={cn(
+                    "flex w-full max-w-[148px] items-center justify-center sm:w-auto sm:max-w-none",
+                    row.length === 3 && index === 2 && "col-span-2 sm:col-span-1",
+                  )}
+                >
                   {index > 0 ? (
-                    <span className="mx-5 hidden h-8 w-px bg-[#d9d9d9] sm:inline-block" aria-hidden />
+                    <span
+                      className="mx-5 hidden h-8 w-px shrink-0 bg-[#d9d9d9] sm:inline-block"
+                      aria-hidden
+                    />
                   ) : null}
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    width={logo.width}
-                    height={logo.height}
-                    className="h-auto w-auto max-h-11 max-w-[130px] object-contain sm:max-h-12 sm:max-w-[150px]"
-                  />
+                  <div
+                    className={cn(
+                      "flex h-14 w-full items-center justify-center",
+                      logo.whiteBox && "rounded-sm bg-white px-3 py-2.5 shadow-sm sm:px-5 sm:py-3",
+                    )}
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      width={logo.width}
+                      height={logo.height}
+                      className="h-auto w-auto max-h-9 max-w-[108px] object-contain sm:max-h-12 sm:max-w-[150px]"
+                    />
+                  </div>
                 </li>
               ))}
             </ul>

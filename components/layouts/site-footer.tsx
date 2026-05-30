@@ -7,7 +7,7 @@ import { FooterOfficialInfo } from "@/components/layouts/footer/footer-official-
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#00aeef] text-white">
+    <footer className="bg-[#00B5F9] text-white">
       <Container className="px-4 py-12 sm:px-6 sm:py-14 lg:py-16">
         <div className="flex flex-col items-center text-center">
           <FooterLogo />

@@ -11,10 +11,10 @@ export function WhyChooseUsContent() {
 
       <h2
         id="why-choose-us-heading"
-        className="mt-3 text-3xl font-bold leading-tight text-[#1a1a1a] sm:text-4xl lg:text-[2.5rem] lg:leading-[1.15]"
+        className="mt-3 text-2xl font-bold leading-tight w-[300px] text-[#1a1a1a] sm:text-3xl lg:text-[2.3rem]"
       >
         {WHY_CHOOSE_US.headingPrefix}{" "}
-        <span className="text-[#00aeef]">{WHY_CHOOSE_US.headingHighlight}</span>
+        <span className="text-[#00B5F9]">{WHY_CHOOSE_US.headingHighlight}</span>
       </h2>
 
       <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-[#5c5c5c] sm:text-base sm:leading-7">
@@ -22,7 +22,7 @@ export function WhyChooseUsContent() {
           <p key={index}>
             {paragraph.before}
             {paragraph.highlight ? (
-              <span className="font-medium text-[#00aeef]">
+              <span className="font-medium text-[#00B5F9]">
                 {paragraph.highlight}
               </span>
             ) : null}

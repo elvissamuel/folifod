@@ -46,7 +46,7 @@ export function ServiceDetailInspectionSection({
           <Image src="/Shape.png" alt="" fill className="object-cover object-center opacity-60" sizes="100vw" />
         </div>
         <Container className="relative z-10">
-          <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 bg-[#e8eef4] px-6 py-7 sm:px-8 md:grid-cols-2">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 px-6 py-7 sm:px-8 md:grid-cols-2">
             <div className="flex justify-center md:justify-start">
               <Image
                 src={assurance.image}

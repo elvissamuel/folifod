@@ -25,24 +25,30 @@ export function ServiceDetailFocusSection({
           <h2 className="mt-2 text-3xl font-bold text-[#1a1a1a]">{heading}</h2>
         </header>
 
-        <ul className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
-          {cards.map((card) => (
-            <li
-              key={card.title}
-              className={`relative min-h-[120px] overflow-hidden rounded-md px-6 py-7 text-center text-white ${card.className}`}
-            >
-              <div className="absolute inset-0 bg-[url('/Shape.png')] bg-cover bg-center opacity-20" aria-hidden />
-              <h3
-                className={`relative z-10 ${
-                  card.title.length > 90
-                    ? "text-[13px] font-semibold leading-6"
-                    : "text-[2rem] font-bold leading-tight"
-                }`}
+        <ul className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch">
+          {cards.map((card) => {
+            const isLongCopy = card.title.length > 90;
+
+            return (
+              <li
+                key={card.title}
+                  className={`relative flex h-[220px] flex-col overflow-hidden rounded-md px-6 py-7 text-center text-white ${isLongCopy ? "sm:h-[260px]" : "sm:h-[220px]"} ${card.className}`}
               >
-                {card.title}
-              </h3>
-            </li>
-          ))}
+                <div className="absolute inset-0 bg-[url('/Shape.png')] bg-cover bg-center opacity-20" aria-hidden />
+                <div className="relative z-10 flex flex-1 items-center justify-center overflow-y-auto">
+                  <h3
+                    className={
+                      isLongCopy
+                        ? "text-[13px] font-semibold leading-6"
+                        : "text-[1.5rem] font-bold leading-tight"
+                    }
+                  >
+                    {card.title}
+                  </h3>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </Container>
     </section>

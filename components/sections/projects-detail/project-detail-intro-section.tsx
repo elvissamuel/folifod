@@ -29,10 +29,10 @@ export function ProjectDetailIntroSection({
         <Image src="/Shape.png" alt="" fill className="object-cover object-center opacity-70" sizes="100vw" />
       </div>
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
           <div>
             <p className="text-sm font-medium text-[#00aeef]">{date}</p>
-            <h2 className="mt-2 text-4xl font-bold leading-tight text-[#00aeef]">
+            <h2 className="mt-2 text-3xl max-w-lg font-bold leading-tight text-[#00aeef]">
               Project: {title}
             </h2>
             <div className="mt-4 space-y-1 text-[14px] leading-7 text-[#4e4e4e]">

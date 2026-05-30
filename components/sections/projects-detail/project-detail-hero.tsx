@@ -27,7 +27,7 @@ export function ProjectDetailHero({ title, image }: ProjectDetailHeroProps) {
       </div>
 
       <Container className="relative z-10 py-20 sm:py-24">
-        <h1 id="project-detail-hero-heading" className="text-4xl font-bold text-white sm:text-5xl">
+        <h1 id="project-detail-hero-heading" className="text-2xl font-bold text-white sm:text-3xl">
           {title}
         </h1>
         <nav aria-label="Breadcrumb" className="mt-4">

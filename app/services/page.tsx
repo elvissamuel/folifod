@@ -6,6 +6,7 @@ import { UpdatesSection } from "@/components/sections/updates/updates-section";
 import { ServicesPageHero } from "@/components/sections/services-page/services-page-hero";
 import { ServicesPageExperienceSection } from "@/components/sections/services-page/services-page-experience-section";
 import { ServicesPageTrustSection } from "@/components/sections/services-page/services-page-trust-section";
+import { BuildCtaSection } from "@/components/sections/build-cta/build-cta-section";
 
 export const metadata: Metadata = {
   title: `Services | ${SITE.title}`,
@@ -21,6 +22,7 @@ export default function ServicesPage() {
       <ServicesPageExperienceSection />
       <ServicesPageTrustSection />
       <UpdatesSection />
+      <BuildCtaSection />
     </SiteShell>
   );
 }

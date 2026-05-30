@@ -73,13 +73,13 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
     slug: "epc",
     heroTitle: "FOLIFOD EPC",
     breadcrumbLabel: "Our Services",
-    heroImage: "/Service Image 1.png",
+    heroImage: "/epc-service.png",
     intro: {
       eyebrow: "Our Services",
       heading: "FOLIFOD EPC",
       description:
         "Our approach to Engineering, Procurement and Construction with experienced professionals is our trademark of excellence. We provide that necessary technical platform through the establishment of a robust partnership to achieve committed results, preserve legal interests, and maximize commercial and moral client's satisfaction.",
-      image: "/hero-bg-right.jpg",
+      image: "/epc-service.png",
       imageAlt: "Engineer performing EPC-related field inspection",
     },
     focus: {
@@ -115,7 +115,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
       heading: "Precision. Reliability. Performance.",
       description:
         "At Folifod, maintenance is more than routine - it's a discipline built on planning, precision, and performance. With proven expertise in turnaround and shutdown management, we deliver sustainable maintenance solutions that enhance equipment reliability, extend asset life, and ensure continuous operations.",
-      image: "/hero-bg-right.jpg",
+      image: "/epc-service.png",
       imageAlt: "Engineer performing equipment maintenance",
     },
     focus: {
@@ -145,7 +145,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
       heading: "Integrity. Compliance. Confidence.",
       description:
         "Inspection and quality assurance form the backbone of Folifod's operational excellence. We stay guided by an effective responsibility, ensuring every project we deliver meets or exceeds the highest global standards for safety, reliability, and performance.",
-      image: "/hero-bg-right.jpg",
+      image: "/epc-service.png",
       imageAlt: "Industrial inspection in progress",
     },
     focus: {
@@ -175,7 +175,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
         heading: "Assurance Through Expertise",
         description:
           "At Folifod Integrated Services Limited, we invest in people, process, and precision. Our inspectors carry vital certifications - they are trusted partners who bring integrity and accountability to every project.\n\nFrom routine QA/QC checks to complex asset integrity audits, Folifod delivers inspection services that ensure your facilities remain safe, compliant, and reliable.",
-        image: "/Service Image 4.png",
+        image: "/service-inspection.png",
         imageAlt: "Inspection team operating equipment in the field",
       },
     },
@@ -190,7 +190,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
       heading: "Building Competence. Elevating Standards. Sustaining Excellence.",
       description:
         "At Folifod, we believe that long-term success in engineering begins with people. Training is at the core of our solutions - designed to enhance competence at every level - from entry-level technical staff to seasoned professionals.\n\nOur programs are built on industry-centric experience, real-life scenarios and improvement, ensuring that every participant - from safety and technical experts to operations and supervisors - gains practical, relevant and globally aligned expertise.",
-      image: "/Service Image 4.png",
+      image: "/training-hero-1.png",
       imageAlt: "Technical field training session",
     },
     focus: {
@@ -228,16 +228,16 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
         ],
         ctaLabel: "GET STARTED",
         ctaHref: "/contact-us",
-        image: "/choose-us-img.png",
+        image: "/training-hero-2.png",
         imageAlt: "Training certificate presentation session",
         galleryImages: [
-          "/choose-us-img.png",
-          "/Service Image 4.png",
-          "/vision-img.png",
-          "/hero-bg-right.jpg",
-          "/Service Image 1.png",
-          "/Service Image 2.png",
-          "/Service Image 3.png",
+          "/traning-1.jpg",
+          "/traning-2.jpg",
+          "/traning-3.jpg",
+          "/traning-4.jpg",
+          "/traning-5.jpg",
+          "/traning-6.jpg",
+          "/traning-7.jpg",
         ],
       },
       offerings: {
@@ -259,7 +259,7 @@ export const SERVICE_PAGE_DETAILS: ServicePageDetail[] = [
         heading: "Our Commitment",
         description:
           "At Folifod Integrated Services Limited, our goal is to create a workforce that performs safely, efficiently, and sustainably. We believe programs that blend instructional discipline, mentoring support and practical immersion based exercises, are what build competence.\n\nWhether you're upskilling your workforce, building fresh recruits, or preparing your team for field-based operational excellence.",
-        image: "/vision-img.png",
+        image: "/training-hero-3.png",
         imageAlt: "Hands-on classroom training session",
       },
     },

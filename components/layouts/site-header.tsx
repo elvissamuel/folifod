@@ -16,11 +16,11 @@ export function SiteHeader({ variant = "static" }: SiteHeaderProps) {
   const isFloating = variant === "floating";
 
   const contactButtonClass =
-    "inline-flex items-center justify-center bg-gradient-to-b from-[#00d4ff] via-[#00a8e8] to-[#0088cc] px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-90";
+    "items-center justify-center bg-gradient-to-b from-[#00d4ff] via-[#00a8e8] to-[#0088cc] px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-90";
 
   if (isFloating) {
     return (
-      <header className="absolute left-0 right-0 top-20 z-50 -translate-y-1/2 sm:top-24">
+      <header className="absolute left-0 right-0 top-24 z-50 max-lg:translate-y-0 lg:top-24 lg:-translate-y-1/2">
         <Container className="px-4 sm:px-6 lg:px-8">
           <div className="rounded-lg bg-white shadow-[0_4px_28px_rgba(0,0,0,0.14)]">
             <div className="flex min-h-[68px] items-stretch sm:min-h-[72px]">
@@ -74,16 +74,19 @@ export function SiteHeader({ variant = "static" }: SiteHeaderProps) {
             <div
               id="mobile-nav"
               className={cn(
-                "max-h-[70vh] overflow-y-auto border-t border-[#ececec] bg-white lg:hidden",
+                "mt-2 max-h-[70vh] overflow-y-auto border-t border-[#ececec] bg-white pt-6 lg:hidden",
                 !mobileOpen && "hidden",
               )}
             >
-              <div className="flex flex-col gap-4 px-4 py-4 sm:px-6">
-                <MainNav onLinkClick={() => setMobileOpen(false)} />
+              <div className="flex flex-col gap-4 px-4 pb-5 sm:px-6">
+                <MainNav
+                  key={mobileOpen ? "mobile-nav-open" : "mobile-nav-closed"}
+                  onLinkClick={() => setMobileOpen(false)}
+                />
                 <Link
                   href="/contact-us"
                   onClick={() => setMobileOpen(false)}
-                  className={cn(contactButtonClass, "w-full text-center")}
+                  className={cn(contactButtonClass, "inline-flex w-full text-center")}
                 >
                   CONTACT US
                 </Link>
@@ -105,7 +108,7 @@ export function SiteHeader({ variant = "static" }: SiteHeaderProps) {
         <div className="flex items-center gap-3">
           <Link
             href="/contact-us"
-            className={cn(contactButtonClass, "hidden sm:inline-flex")}
+            className={cn(contactButtonClass, "hidden lg:inline-flex")}
           >
             CONTACT US
           </Link>
@@ -143,16 +146,19 @@ export function SiteHeader({ variant = "static" }: SiteHeaderProps) {
       <div
         id="mobile-nav"
         className={cn(
-          "max-h-[70vh] overflow-y-auto border-t border-[#ececec] bg-white lg:hidden",
+          "max-h-[70vh] overflow-y-auto border-t border-[#ececec] bg-white pt-6 lg:hidden",
           !mobileOpen && "hidden",
         )}
       >
-        <Container className="flex flex-col gap-4 py-4">
-          <MainNav onLinkClick={() => setMobileOpen(false)} />
+        <Container className="flex flex-col gap-4 pb-5 pt-1">
+          <MainNav
+            key={mobileOpen ? "mobile-nav-open" : "mobile-nav-closed"}
+            onLinkClick={() => setMobileOpen(false)}
+          />
           <Link
             href="/contact-us"
             onClick={() => setMobileOpen(false)}
-            className={cn(contactButtonClass, "w-full text-center")}
+            className={cn(contactButtonClass, "inline-flex w-full text-center")}
           >
             CONTACT US
           </Link>

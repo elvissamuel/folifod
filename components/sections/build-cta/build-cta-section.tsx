@@ -29,7 +29,7 @@ export function BuildCtaSection() {
       <Container className="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center sm:py-24 lg:py-28">
         <h2
           id="build-cta-heading"
-          className="max-w-3xl text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl lg:leading-tight"
+          className="max-w-3xl text-2xl lg:w-[500px] font-bold leading-tight text-white sm:text-3xl lg:text-4xl lg:leading-tight"
         >
           {heading}
         </h2>

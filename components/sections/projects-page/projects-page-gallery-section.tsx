@@ -6,8 +6,8 @@ export function ProjectsPageGallerySection() {
   return (
     <section className="bg-[#f3f3f3] py-14 sm:py-16 lg:py-20" aria-labelledby="projects-page-heading">
       <Container>
-        <header className="max-w-3xl">
-          <p className="text-sm font-medium text-[#00aeef]">{PROJECTS_PAGE_INTRO.eyebrow}</p>
+        <header className="max-w-lg">
+          <p className="text-sm font-medium text-[#00B5F9]">{PROJECTS_PAGE_INTRO.eyebrow}</p>
           <h2 id="projects-page-heading" className="mt-2 text-4xl font-bold leading-tight text-[#00aeef]">
             {PROJECTS_PAGE_INTRO.heading}
           </h2>
