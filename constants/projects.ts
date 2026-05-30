@@ -39,7 +39,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
     id: "storage-tank",
     title: "Storage Tank Inspection",
     client: "Smithpack/Gladex Dynamic resources",
-    image: "/hero-bg-right.jpg",
+    image: "/performance-img-1.jpg",
     overlay: "center",
     gridClassName:
       "md:col-span-5 md:col-start-8 md:row-start-1 min-h-[220px] md:min-h-0",
@@ -59,7 +59,7 @@ export const PROJECT_CARDS: ProjectCard[] = [
     id: "flowline",
     title: "Flowline Leak Repair and Replacement",
     client: "NEPL/NDWestern JV",
-    image: "/Service Image 1.png",
+    image: "/performance-img-2.jpg",
     overlay: "bottom",
     gridClassName:
       "md:col-span-4 md:col-start-4 md:row-start-1 md:row-span-3 min-h-[300px] md:min-h-0",

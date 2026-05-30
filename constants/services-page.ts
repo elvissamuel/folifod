@@ -4,7 +4,7 @@ export const SERVICES_PAGE_HERO = {
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
   ],
-  backgroundImage: "/Service Image 4.png",
+  backgroundImage: "/service-hero-bg-img.jpg",
 } as const;
 
 export const SERVICES_PAGE_EXPERIENCE = {

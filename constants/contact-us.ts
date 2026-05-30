@@ -4,7 +4,7 @@ export const CONTACT_US_HERO = {
     { label: "Home", href: "/" },
     { label: "Contact Us", href: "/contact-us" },
   ],
-  backgroundImage: "/hero-bg-right.jpg",
+  backgroundImage: "/contact-bg-img.jpg",
 } as const;
 
 export const CONTACT_US_CARDS = [

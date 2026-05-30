@@ -4,32 +4,15 @@ import { CtaBannerLearnMore } from "@/components/sections/cta-banner/cta-banner-
 export function CtaBannerSection() {
   return (
     <section
-      className="relative overflow-hidden bg-[#0a6578]"
+      className="relative overflow-hidden bg-[#005a71]"
       aria-label="Contact call to action"
     >
-      {/* <div className="pointer-events-none absolute inset-0 opacity-[0.12]" aria-hidden>
-        <Image
-          src="/Shape.png"
-          alt=""
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-      </div> */}
-
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 sm:px-6 lg:flex-row lg:items-stretch lg:justify-center lg:px-8">
-        <div className="py-12 sm:py-14 lg:py-16">
+      <div className="relative z-10 mx-auto flex justify-center gap-12 w-full max-w-7xl flex-col lg:min-h-[176px] lg:flex-row lg:items-center">
+        <div className="flex items-center px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-10">
           <CtaBannerLearnMore />
         </div>
 
-        {/* <div
-          className="my-8 hidden w-px shrink-0 border-l border-dotted border-white/50 lg:my-4 lg:block"
-          aria-hidden
-        /> */}
-
-        {/* <div className="h-px w-full shrink-0 border-t border-dotted border-white/50 lg:hidden" /> */}
-
-        <div className="mt-8 w-full pb-12 sm:pb-14 lg:mt-0 lg:w-[38%] lg:self-stretch lg:pb-0 xl:w-[36%]">
+        <div className="flex items-stretch justify-center px-6 pb-10 sm:px-8 lg:px-0 lg:py-0">
           <CtaBannerCallback />
         </div>
       </div>

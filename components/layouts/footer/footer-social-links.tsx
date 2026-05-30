@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FOOTER } from "@/constants/footer";
 import { FacebookIcon, XIcon, YouTubeIcon } from "@/components/shared/icons";
 import { cn } from "@/lib/utils";
@@ -15,13 +14,11 @@ export function FooterSocialLinks() {
     <ul className="mt-4 flex items-center gap-3" aria-label="Social media">
       {FOOTER.social.map((social) => (
         <li key={social.id}>
-          <Link
-            href={social.href}
-            target={social.href === "#" ? undefined : "_blank"}
-            rel={social.href === "#" ? undefined : "noopener noreferrer"}
-            aria-label={social.label}
+          <span
+            aria-disabled="true"
+            aria-label={`${social.label} (unavailable)`}
             className={cn(
-              "flex h-9 w-9 items-center justify-center rounded-full transition-opacity hover:opacity-90",
+              "flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-full opacity-60",
               variantStyles[social.variant],
             )}
           >
@@ -34,7 +31,7 @@ export function FooterSocialLinks() {
             {social.variant === "twitter" && (
               <XIcon className="h-3.5 w-3.5 text-white" />
             )}
-          </Link>
+          </span>
         </li>
       ))}
     </ul>

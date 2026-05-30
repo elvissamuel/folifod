@@ -2,7 +2,7 @@ export const CTA_BANNER = {
   learnMore: {
     title: "Learn More About Us",
     subtitle: "Speak to one of our agents",
-    cta: { label: "GET STARTED NOW", href: "/contact" },
+    cta: { label: "GET STARTED NOW", href: "/contact-us" },
   },
   callback: {
     label: "REQUEST A CALL BACK",

@@ -4,7 +4,7 @@ export const ABOUT_US_HERO = {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
   ],
-  backgroundImage: "/hero-bg-right.jpg",
+  backgroundImage: "/about-bg-img.jpg",
 } as const;
 
 export const ABOUT_US_INTRO = {

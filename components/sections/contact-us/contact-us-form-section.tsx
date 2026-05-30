@@ -23,7 +23,7 @@ export function ContactUsFormSection() {
             <p className="text-sm font-semibold text-[#00aeef]">{CONTACT_US_FORM.eyebrow}</p>
             <h2
               id="contact-form-title"
-              className="mt-1 text-4xl font-bold leading-tight text-[#00aeef]"
+              className="mt-1 text-3xl font-bold leading-tight text-[#00aeef]"
             >
               {CONTACT_US_FORM.title}
             </h2>

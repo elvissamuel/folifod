@@ -21,13 +21,10 @@ export function TrustedPartnersSection() {
           fill
           priority={false}
           aria-hidden
-          className="object-cover object-[75%_center]"
+          className="object-cover object-top"
           sizes="100vw"
         />
-        <div
-          className="absolute inset-0 bg-[#0b1f2e]/82"
-          aria-hidden
-        />
+        <div className="absolute inset-0 bg-[#0b1f2e]/82" aria-hidden />
       </div>
 
       <Container className="relative z-10 py-16 sm:py-20 lg:py-24">
@@ -37,7 +34,7 @@ export function TrustedPartnersSection() {
           <PartnerLogoRow logos={PARTNER_LOGOS_ROW_ONE} />
           <PartnerLogoRow
             logos={PARTNER_LOGOS_ROW_TWO}
-            className="max-w-3xl mx-auto"
+            className="mx-auto max-w-3xl"
           />
         </div>
       </Container>

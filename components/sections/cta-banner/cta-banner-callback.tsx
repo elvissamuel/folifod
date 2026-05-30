@@ -5,29 +5,24 @@ export function CtaBannerCallback() {
   const { label, phone, phoneDisplay } = CTA_BANNER.callback;
 
   return (
-    <div className="relative flex h-full w-full flex-col items-center justify-center px-6 py-8 text-center sm:px-10 sm:py-6">
-      <div
-        className="pointer-events-none absolute inset-y-0 left-1/2 w-full max-w-[280px] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#00b8e8] to-transparent opacity-90 blur-sm"
+    <div className="flex h-full w-full min-h-[200px] min-w-[260px] max-w-[320px] flex-col items-center justify-center bg-gradient-to-r from-[#00c8f5] via-[#00aee8] to-[#0078b5] px-8 py-10 text-center text-white lg:min-h-full lg:w-[300px] lg:max-w-none lg:py-8">
+      <Image
+        src="/call-plus.png"
+        alt=""
+        width={72}
+        height={72}
+        className="h-14 w-auto sm:h-16"
         aria-hidden
       />
-      <div className="relative z-10 flex flex-col items-center">
-        <Image
-          src="/call-plus.png"
-          alt=""
-          width={64}
-          height={64}
-          className="h-12 w-16 sm:h-16 sm:w-16"
-        />
-        <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.16em] text-white">
-          {label}
-        </p>
-        <a
-          href={`tel:${phone}`}
-          className="mt-2 text-2xl font-bold tracking-wide text-white transition-opacity hover:opacity-90 sm:text-3xl"
-        >
-          {phoneDisplay}
-        </a>
-      </div>
+      <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+        {label}
+      </p>
+      <a
+        href={`tel:${phone}`}
+        className="mt-2 text-[1.65rem] font-bold leading-tight tracking-wide text-white transition-opacity hover:opacity-90 sm:text-[1.85rem]"
+      >
+        {phoneDisplay}
+      </a>
     </div>
   );
 }

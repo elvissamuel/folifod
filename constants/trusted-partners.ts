@@ -1,7 +1,7 @@
 export const TRUSTED_PARTNERS_SECTION = {
   title: "Trusted by Industry Leaders",
   subtitle: "Brands we have worked with",
-  backgroundImage: "/hero-bg-right.jpg",
+  backgroundImage: "/trusted-bg-img.jpg",
 } as const;
 
 export type PartnerLogo = {

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { CONTACT, SOCIAL_LINKS } from "@/constants/site";
 import { Container } from "@/components/shared/container";
 import {
@@ -52,15 +51,13 @@ export function TopBar() {
               const Icon = socialIconMap[social.icon];
               return (
                 <li key={social.label}>
-                  <Link
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-7 w-7 items-center justify-center rounded-full text-[#4a4a4a] transition-colors hover:text-[#00aeef]"
-                    aria-label={social.label}
+                  <span
+                    aria-disabled="true"
+                    aria-label={`${social.label} (unavailable)`}
+                    className="flex h-7 w-7 cursor-not-allowed items-center justify-center rounded-full text-[#4a4a4a] opacity-60"
                   >
                     <Icon className="h-3.5 w-3.5" />
-                  </Link>
+                  </span>
                 </li>
               );
             })}

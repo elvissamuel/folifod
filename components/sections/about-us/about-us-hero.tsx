@@ -13,7 +13,7 @@ export function AboutUsHero() {
           fill
           priority
           aria-hidden
-          className="object-cover object-center"
+          className="object-cover object-[center_15%]"
           sizes="100vw"
         />
         <div

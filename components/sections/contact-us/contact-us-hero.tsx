@@ -23,7 +23,7 @@ export function ContactUsHero() {
       </div>
 
       <Container className="relative z-10 py-20 sm:py-24">
-        <h1 id="contact-hero-heading" className="text-4xl font-bold text-white sm:text-5xl">
+        <h1 id="contact-hero-heading" className="text-3xl font-bold text-white sm:text-4xl">
           {CONTACT_US_HERO.title}
         </h1>
         <nav aria-label="Breadcrumb" className="mt-4">
