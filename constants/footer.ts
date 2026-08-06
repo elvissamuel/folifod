@@ -1,7 +1,7 @@
 export const FOOTER = {
   description:
-    "We are a professional company offering specialized services in Fabrication, Asset Integrity, Quality Management, Engineering Management, and Training,",
-  officialInfoHeading: "Offical info.",
+    "We are a professional organization delivering specialized Engineering, Procurement, Construction, Installation, and Commissioning (EPCIC) solutions, alongside expert services in Fabrication, Asset Integrity Management, Quality Management, Engineering Management, and Technical Training across the energy, industrial, and infrastructure sectors.",
+  officialInfoHeading: "Official info.",
   address: {
     lines: [
       "No 7 Chief Ukueku Close,",
@@ -13,10 +13,10 @@ export const FOOTER = {
   email: "info@folifod.com",
   social: [
     {
-      id: "placeholder",
-      label: "Social link",
-      href: "#",
-      variant: "white" as const,
+      id: "linkedin",
+      label: "LinkedIn",
+      href: "https://linkedin.com",
+      variant: "linkedin" as const,
     },
     {
       id: "facebook",
@@ -24,17 +24,17 @@ export const FOOTER = {
       href: "https://facebook.com",
       variant: "facebook" as const,
     },
-    {
-      id: "youtube",
-      label: "YouTube",
-      href: "https://youtube.com",
-      variant: "youtube" as const,
-    },
-    {
-      id: "twitter",
-      label: "Twitter",
-      href: "https://twitter.com",
-      variant: "twitter" as const,
-    },
+    // {
+    //   id: "youtube",
+    //   label: "YouTube",
+    //   href: "https://youtube.com",
+    //   variant: "youtube" as const,
+    // },
+    // {
+    //   id: "twitter",
+    //   label: "Twitter",
+    //   href: "https://twitter.com",
+    //   variant: "twitter" as const,
+    // },
   ],
 } as const;

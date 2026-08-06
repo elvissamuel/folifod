@@ -1,9 +1,9 @@
 import { FOOTER } from "@/constants/footer";
-import { FacebookIcon, XIcon, YouTubeIcon } from "@/components/shared/icons";
+import { FacebookIcon, LinkedInIcon, XIcon, YouTubeIcon } from "@/components/shared/icons";
 import { cn } from "@/lib/utils";
 
 const variantStyles = {
-  white: "bg-white",
+  linkedin: "bg-[#0a66c2]",
   facebook: "bg-[#1877f2]",
   youtube: "bg-[#ff0000]",
   twitter: "bg-[#55acee]",
@@ -22,14 +22,11 @@ export function FooterSocialLinks() {
               variantStyles[social.variant],
             )}
           >
+            {social.variant === "linkedin" && (
+              <LinkedInIcon className="h-4 w-4 text-white" />
+            )}
             {social.variant === "facebook" && (
               <FacebookIcon className="h-4 w-4 text-white" />
-            )}
-            {social.variant === "youtube" && (
-              <YouTubeIcon className="h-4 w-4 text-white" />
-            )}
-            {social.variant === "twitter" && (
-              <XIcon className="h-3.5 w-3.5 text-white" />
             )}
           </span>
         </li>

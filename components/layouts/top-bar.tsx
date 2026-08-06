@@ -18,7 +18,7 @@ const socialIconMap = {
 
 export function TopBar() {
   return (
-    <div className="relative z-0 border-b border-[#e8e8e8] bg-[#f5f5f5] text-[13px] text-[#4a4a4a]">
+    <div className="relative z-10 border-b border-[#e8e8e8] bg-[#f5f5f5] text-[13px] text-[#4a4a4a]">
       <Container className="flex min-h-20 flex-wrap items-center justify-between gap-3 py-2">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <a

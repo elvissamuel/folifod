@@ -70,27 +70,31 @@ export function AboutUsTrustedMissionSection() {
           aria-hidden
         />
 
-        <div className="relative mx-auto flex max-w-5xl items-center justify-center px-4 sm:px-6 lg:px-8">
-          <div className="relative z-10 flex w-full flex-col items-center justify-center gap-8 md:flex-row md:gap-10 lg:gap-28 mt-10">
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10 mt-10 grid w-full grid-cols-1 items-stretch justify-items-center gap-8 md:grid-cols-2 md:gap-10 lg:gap-16">
             {ABOUT_US_MISSION_VISION.map((item) => (
               <article
                 key={item.id}
-                className="flex aspect-square w-full max-w-[280px] flex-col items-center justify-center bg-gradient-to-b from-[#00B5F9] to-[#005A7D] px-2 py-7 text-center text-white shadow-[0_12px_32px_rgba(0,0,0,0.22)] sm:max-w-[300px] lg:max-w-[320px]"
+                className="flex h-[340px] w-full max-w-[420px] flex-col overflow-hidden bg-gradient-to-b from-[#00B5F9] to-[#005A7D] px-4 py-6 text-center text-white shadow-[0_12px_32px_rgba(0,0,0,0.22)] sm:h-[420px] md:h-full md:min-h-[320px]"
               >
-                <div className="flex justify-center">
-                  <Image
-                    src={item.icon}
-                    alt=""
-                    width={60}
-                    height={60}
-                    className="h-auto w-auto object-contain"
-                    aria-hidden
-                  />
+                <div className="flex min-h-0 flex-1 flex-col items-center">
+                  <div className="flex shrink-0 justify-center">
+                    <Image
+                      src={item.icon}
+                      alt=""
+                      width={60}
+                      height={60}
+                      className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+                      aria-hidden
+                    />
+                  </div>
+                  <h3 className="mt-4 shrink-0 text-xs font-semibold uppercase tracking-[0.12em]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 min-h-0 w-full flex-1 overflow-y-auto text-xs leading-5 text-white/95 sm:text-sm sm:leading-6">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="mt-4 text-xs font-semibold uppercase tracking-[0.12em]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 max-w-[240px] text-sm leading-6 text-white/95">{item.description}</p>
               </article>
             ))}
           </div>

@@ -88,4 +88,10 @@ export const PROJECTS_PAGE_CALLBACK = {
     description: "Description",
   },
   button: "SUBMIT MESSAGE",
+  submittingLabel: "SENDING...",
+  successMessage: "Thank you! We will call you back shortly.",
+  errorMessage: "Something went wrong. Please try again or email us at info@folifod.com.",
+  configErrorMessage:
+    "The callback form is not configured yet. Please email us at info@folifod.com.",
+  subject: "Callback request - Folifod website",
 } as const;

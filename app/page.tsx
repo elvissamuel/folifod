@@ -11,8 +11,8 @@ import { BuildCtaSection } from "@/components/sections/build-cta/build-cta-secti
 
 export default function Home() {
   return (
-    <SiteShell>
-      <HeroSection />
+    <SiteShell fullViewportHero>
+      <HeroSection fullViewport />
       <ServicesSection />
       <WhyChooseUsSection />
       <CtaBannerSection />

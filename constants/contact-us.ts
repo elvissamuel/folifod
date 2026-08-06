@@ -47,6 +47,12 @@ export const CONTACT_US_FORM = {
     message: "Start typing here",
   },
   submitLabel: "SUBMIT NOW",
+  submittingLabel: "SENDING...",
+  successMessage: "Thank you! Your message has been sent. We will get back to you soon.",
+  errorMessage: "Something went wrong. Please try again or email us at info@folifod.com.",
+  configErrorMessage:
+    "The contact form is not configured yet. Please email us at info@folifod.com.",
+  subject: "New contact form message - Folifod website",
 } as const;
 
 export const CONTACT_US_MAP = {

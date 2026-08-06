@@ -18,7 +18,7 @@ export const SERVICES_SECTION = {
 export const SERVICES: ServiceItem[] = [
   {
     id: "epc",
-    title: "FOLIDOD EPC",
+    title: "FOLIFOD EPC",
     href: "/services/epc",
     image: "/Service Image 1.png",
     textPosition: "top",
@@ -27,7 +27,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: "maintenance",
-    title: "FOLIDOD MAINTENANCE",
+    title: "FOLIFOD MAINTENANCE",
     href: "/services/maintenance",
     image: "/Service Image 2.png",
     textPosition: "bottom",
@@ -35,7 +35,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: "inspection",
-    title: "FOLIDOD INSPECTION",
+    title: "FOLIFOD INSPECTION",
     href: "/services/inspection",
     image: "/Service Image 3.png",
     textPosition: "top",
@@ -44,7 +44,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: "training",
-    title: "FOLIDOD TRAINING",
+    title: "FOLIFOD TRAINING",
     href: "/services/training",
     image: "/Service Image 4.png",
     textPosition: "bottom",

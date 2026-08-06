@@ -2,8 +2,8 @@ export const SITE = {
   name: "FOLIFOD",
   tagline: "INTEGRATED SERVICES LIMITED",
   logos: {
-    colored: "/logo-colored.png",
-    white: "/logo-white.png",
+    colored: "/Folifod_Logo_Wordmark_Horizontal_colored.png",
+    white: "/Folifod_Logo_Wordmark.png",
   },
   title: "Folifod Integrated Services Limited",
   description:
@@ -12,7 +12,7 @@ export const SITE = {
 
 export const CONTACT = {
   email: "info@folifod.com",
-  phones: ["(+234) 7039509547", "(+234) 8077171744"] as const,
+  phones: ["(+234) 8061193110"] as const,
 } as const;
 
 export const NAV_LINKS = [
@@ -39,17 +39,7 @@ export const SOCIAL_LINKS = [
     label: "Facebook",
     href: "https://facebook.com",
     icon: "facebook" as const,
-  },
-  {
-    label: "Pinterest",
-    href: "https://pinterest.com",
-    icon: "pinterest" as const,
-  },
-  {
-    label: "X",
-    href: "https://x.com",
-    icon: "x" as const,
-  },
+  }
 ] as const;
 
 export const HERO = {
@@ -57,5 +47,5 @@ export const HERO = {
   heading: "Engineering Integrity. Delivering Excellence.",
   description:
     "We provide world-class engineering, fabrication, and quality management solutions for the Oil & Gas and Marine industries — built on professionalism, precision, and trust.",
-  cta: { label: "GET A QUOTE", href: "/contact-us" },
+  cta: { label: "WHO WE ARE", href: "/about-us" },
 } as const;

@@ -3,6 +3,9 @@
   RewriteEngine On
   RewriteBase /
 
+  # Browsers often request /favicon.ico by default
+  RewriteRule ^favicon\.ico$ /Folifod-icon.png [L]
+
   # If the request is not an existing file or directory, try adding .html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

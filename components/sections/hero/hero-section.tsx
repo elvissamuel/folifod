@@ -1,11 +1,21 @@
 import Image from "next/image";
 import { Container } from "@/components/shared/container";
 import { HeroContent } from "@/components/sections/hero/hero-content";
+import { cn } from "@/lib/utils";
 
-export function HeroSection() {
+type HeroSectionProps = {
+  fullViewport?: boolean;
+};
+
+export function HeroSection({ fullViewport = false }: HeroSectionProps) {
   return (
     <section
-      className="relative -mt-9 overflow-hidden bg-[#00aeef] sm:-mt-10 lg:-mt-11 lg:min-h-[620px]"
+      className={cn(
+        "relative z-0 overflow-hidden bg-[#00aeef]",
+        fullViewport
+          ? "flex flex-col max-lg:min-h-[calc(100dvh-5rem)] lg:-mt-11 lg:min-h-[620px]"
+          : "-mt-9 sm:-mt-10 lg:-mt-11 lg:min-h-[620px]",
+      )}
       aria-label="Hero"
     >
       {/* Right photo — visible strip only; anchor left so crop happens on the right */}
@@ -34,20 +44,15 @@ export function HeroSection() {
       </div>
 
       {/* Hero copy — above both backgrounds */}
-      <Container className="relative z-20 flex min-h-[460px] items-center pb-14 pt-28 sm:min-h-[540px] sm:pb-16 sm:pt-32 lg:min-h-[620px] lg:pb-20 lg:pt-36">
-        {/* Mobile / tablet: left bg behind content only */}
-        <div className="pointer-events-none absolute inset-0 z-0 lg:hidden">
-          <Image
-            src="/hero-bg-left.png"
-            alt=""
-            fill
-            priority
-            aria-hidden
-            className="object-cover object-left"
-            sizes="100vw"
-          />
-        </div>
-        <div className="relative mx-auto w-full max-w-3xl px-0 sm:px-2 lg:mx-0 lg:max-w-none lg:px-0 lg:-mt-20 lg:px-36">
+      <Container
+        className={cn(
+          "relative z-20 flex items-center",
+          fullViewport
+            ? "flex-1 pb-10 pt-32 max-lg:min-h-[calc(100dvh-5rem)] sm:pb-12 sm:pt-36 lg:min-h-[620px] lg:pb-20 lg:pt-36"
+            : "min-h-[460px] pb-14 pt-28 sm:min-h-[540px] sm:pb-16 sm:pt-32 lg:min-h-[620px] lg:pb-20 lg:pt-36",
+        )}
+      >
+        <div className="relative mx-auto w-full max-w-3xl px-0 sm:px-2 lg:mx-0 lg:max-w-none lg:px-0 -mt-20 lg:px-36">
           <HeroContent />
         </div>
       </Container>

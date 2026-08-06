@@ -1,48 +1,7 @@
 import { Container } from "@/components/shared/container";
 import { PROJECTS_PAGE_CALLBACK } from "@/constants/projects-page";
 import { CONTACT_US_MAP } from "@/constants/contact-us";
-
-function CallbackFormCard() {
-  return (
-    <div className="rounded-sm bg-[#00aeef] px-7 py-7 text-white shadow-[0_14px_36px_rgba(0,0,0,0.2)]">
-      <h3 className="text-center text-2xl font-bold leading-tight">
-        {PROJECTS_PAGE_CALLBACK.cardTitle}
-      </h3>
-      <p className="mt-1 text-center text-sm text-white/90">
-        {PROJECTS_PAGE_CALLBACK.cardSubtitle}
-      </p>
-      <form className="mt-6 space-y-2.5" action="#" method="post">
-        <input
-          aria-label={PROJECTS_PAGE_CALLBACK.fields.name}
-          placeholder={PROJECTS_PAGE_CALLBACK.fields.name}
-          className="h-11 w-full border border-white/60 bg-transparent px-3 text-sm text-white placeholder:text-white/80 outline-none"
-        />
-        <input
-          aria-label={PROJECTS_PAGE_CALLBACK.fields.email}
-          placeholder={PROJECTS_PAGE_CALLBACK.fields.email}
-          className="h-11 w-full border border-white/60 bg-transparent px-3 text-sm text-white placeholder:text-white/80 outline-none"
-        />
-        <input
-          aria-label={PROJECTS_PAGE_CALLBACK.fields.phone}
-          placeholder={PROJECTS_PAGE_CALLBACK.fields.phone}
-          className="h-11 w-full border border-white/60 bg-transparent px-3 text-sm text-white placeholder:text-white/80 outline-none"
-        />
-        <textarea
-          aria-label={PROJECTS_PAGE_CALLBACK.fields.description}
-          placeholder={PROJECTS_PAGE_CALLBACK.fields.description}
-          rows={4}
-          className="w-full resize-none border border-white/60 bg-transparent px-3 py-3 text-sm text-white placeholder:text-white/80 outline-none"
-        />
-        <button
-          type="submit"
-          className="mt-1 inline-flex h-11 w-full items-center justify-center bg-white text-xs font-bold tracking-[0.08em] text-[#5422a5]"
-        >
-          {PROJECTS_PAGE_CALLBACK.button}
-        </button>
-      </form>
-    </div>
-  );
-}
+import { ProjectsPageCallbackFormCard } from "@/components/sections/projects-page/projects-page-callback-form-card";
 
 export function ProjectsPageCallbackMapSection() {
   return (
@@ -60,11 +19,11 @@ export function ProjectsPageCallbackMapSection() {
           </div>
 
           <div className="mt-8 max-w-md lg:hidden">
-            <CallbackFormCard />
+            <ProjectsPageCallbackFormCard />
           </div>
 
           <div className="absolute top-[-40px] right-8 z-20 hidden w-[360px] lg:block">
-            <CallbackFormCard />
+            <ProjectsPageCallbackFormCard />
           </div>
         </Container>
       </div>

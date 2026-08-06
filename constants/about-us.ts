@@ -26,14 +26,14 @@ export const ABOUT_US_MISSION_VISION = [
     icon: "/target-icon.png",
     title: "OUR MISSION",
     description:
-      "To provide fixed equipment integrity and quality management services to meet industry standards and satisfy customer expectations.",
+      "To deliver safe, innovative, and cost-effective Engineering, Procurement, Construction, Installation, and Commissioning (EPCIC) solutions, alongside world-class fabrication, asset integrity, quality management, engineering management, and technical training services that meet industry standards, exceed customer expectations, and create sustainable value for all stakeholders.",
   },
   {
     id: "vision",
     icon: "/eye-target-icon.png",
     title: "OUR VISION",
     description:
-      "To be a world class integrity and quality assurance provider while empowering innovation through cutting-edge engineering solutions to shape a sustainable and connected future.",
+      "To be a leading global engineering and EPCIC solutions provider, recognized for excellence in project delivery, asset integrity, quality management, innovation, and technical expertise, while creating sustainable value and shaping a safer, more efficient, and connected future.",
   },
 ] as const;
 
