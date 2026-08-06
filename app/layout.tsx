@@ -12,10 +12,6 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: SITE.title,
   description: SITE.description,
-  icons: {
-    icon: "/logo-colored.png",
-    apple: "/logo-colored.png",
-  },
 };
 
 export default function RootLayout({
@@ -25,6 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
+      <head>
+        <link rel="icon" href="/Folifod-icon.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/Folifod-icon.png" />
+      </head>
       <body className="min-h-full font-sans">{children}</body>
     </html>
   );
